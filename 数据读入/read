@@ -1,0 +1,22 @@
+# python3
+# -*- coding: utf-8 -*-
+# @Time    : 2018/4/27 13:48
+import datetime
+
+# 下面是read()方法的使用，“r”表示read
+with open('testRead.txt', 'r', encoding='UTF-8') as f1:
+    results = f1.read()    # 读取数据
+    print(results)
+
+# 下面是readline()方法的使用，“r”表示read
+with open('testRead.txt', 'r', encoding='UTF-8') as f2:
+    line = f2.readline()    # 读取第一行
+    while line is not None and line != '':
+        print(line)
+        line = f2.readline()    # 读取下一行
+
+# 下面是readlines()方法的使用，“r”表示read
+with open('testRead.txt', 'r', encoding='UTF-8') as f3:
+    lines = f3.readlines()    # 接收数据
+    for line in lines:     # 遍历数据
+        print(line)
